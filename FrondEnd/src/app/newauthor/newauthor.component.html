@@ -1,0 +1,31 @@
+<div class="header">
+  <h3>Add Author</h3>
+ </div>
+<div class="container containtop" style="margin-left:5%;margin-right:5% ; max-width: 70%; margin-top:-24px">
+<form (ngSubmit)="AddAuthor()" #newauthor="ngForm">
+  <div class="form-way form-group">
+    <label>Author Name</label>  
+    <input type="text" name="a_id" class="form-control" [(ngModel)]="authorItem.authorName" #a_id="ngModel" required/> 
+  </div>  
+  <br>                 
+  <div class="form-way form-group">
+    <label>Nationality</label>  
+    <input type="text" name="a_name" class="form-control"  [(ngModel)]="authorItem.authorNationality" #a_name="ngModel" required/>      
+  </div>  
+  <br> 
+  <div class="form-way form-group">
+    <label>Famous Work</label>  
+    <input type="text" name="a_code" class="form-control"  [(ngModel)]="authorItem.authorAge" #a_code="ngModel" required/>   
+  </div> 
+  <br>
+  <div class="form-way form-group">
+    <label>Image Url</label>  
+    <input type="text" name="a_date" class="form-control"  [(ngModel)]="authorItem.authorImage" #a_date="ngModel" required/>   
+  </div>   
+  <br>
+  <br>      
+  <input type="submit" value="Submit" [disabled]="newauthor.form.invalid" class="btn btn-block btn-shape" />                    
+                              
+</form>
+</div>
+

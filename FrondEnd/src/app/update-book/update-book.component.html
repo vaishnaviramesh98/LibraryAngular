@@ -1,0 +1,33 @@
+<div class="header">
+  <h3>Update Book</h3>
+ </div>
+<div class="container containtop" style="margin-left:5%;margin-right:5% ; max-width: 70%; margin-top:-24px">
+<form (ngSubmit)="editBook()">
+  <div class="form-way form-group">
+    <label>Book Name</label>   
+    <input type="text" name="b_id" class="form-control" [(ngModel)]="bookItem.bookName"/>
+  </div>
+  <br>
+  <div class="form-way form-group">
+    <label>Author</label>   
+    <input type="text" name="b_name" class="form-control" [(ngModel)]="bookItem.authorName"/>    
+  </div>
+  <br>
+  <div class="form-way form-group">
+    <label>Genre</label>   
+    <input type="text" name="b_code" class="form-control" [(ngModel)]="bookItem.bookGenre"/>                     
+    
+  </div>
+  <br>
+  <div class="form-way form-group">
+    <label>Image Url</label>   
+    <input type="text" name="b_image" class="form-control" [(ngModel)]="bookItem.imageUrl"/>                     
+    
+  </div>
+  <br>
+
+        <input type="submit" value="Submit" class="btn btn-block btn-shape"  />                     
+ 
+</form>
+</div>
+

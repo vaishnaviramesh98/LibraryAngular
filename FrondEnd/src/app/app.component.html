@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-lg mynav  " style="padding-left: 5%; ">
+ <div  id="navbarSupportedContent" class="collapse navbar-collapse">
+    <ul class="navbar-nav navbar-right">
+        <a class="nav-link"  routerLink="/login" *ngIf="!_auth.loggedIn()" routerLinkActive="active">Login</a>
+        <a class="nav-link"  routerLink="/signin" *ngIf="!_auth.loggedIn()" routerLinkActive="active">Sign Up</a>
+        <a class="nav-link text-light"  routerLink="books" >Books</a>
+        <a class="nav-link text-light"  routerLink="authors" >Authors</a>
+        <a class="nav-link text-light"  routerLink="/add" *ngIf="_auth.loggedIn()">Add Book</a>
+         <a class="nav-link text-light"  routerLink="/addauthor" *ngIf="_auth.loggedIn()">Add Author</a>
+        <a class="nav-link" style="cursor:pointer" *ngIf="_auth.loggedIn()" (click)="logoutUser()">Logout</a>
+    </ul>
+  </div>
+</nav>
+<router-outlet></router-outlet>            
+<br>
+<br>
+<app-footer></app-footer>

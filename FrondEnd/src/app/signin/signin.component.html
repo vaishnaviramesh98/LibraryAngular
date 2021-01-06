@@ -1,0 +1,71 @@
+<div class="header">
+    <h3>Sign Up</h3>
+ </div>
+ <div class="container containtop" style="margin-left:5%;margin-right:5% ; max-width: 70%; margin-top:-24px">
+  <form class="form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="form-group form-way">
+        <label>Name</label>
+        <input type="text" class="form-control" formControlName="name">
+        <span class="text-danger"
+            *ngIf="(registerFormControl.name.touched || submitted) && registerFormControl.name.errors?.required">
+            Name is required
+        </span>
+    </div>
+    <br>
+    <div class="form-group form-way">
+        <label>Email</label>
+        <input type="text" class="form-control" formControlName="email">
+        <span class="text-danger"
+            *ngIf="(registerFormControl.email.touched || submitted) && registerFormControl.email.errors?.required">
+            Email is required
+        </span>
+        <span class="text-danger"
+            *ngIf="registerFormControl.email.touched && registerFormControl.email.errors?.email">
+            Enter a valid email address
+        </span>
+    </div>
+    <br>
+    <div class="form-group form-way">
+        <label>Username</label>
+        <input type="text" class="form-control" formControlName="username">
+        <span class="text-danger"
+            *ngIf="(registerFormControl.username.touched || submitted) && registerFormControl.username.errors?.required">
+            User Name is required
+        </span>
+        <span class="text-danger"
+            *ngIf="registerFormControl.username.touched && registerFormControl.username.errors?.userNameNotAvailable">
+            User Name is not available
+        </span>
+    </div>
+    <br>
+    <div class="form-group form-way ">
+        <label>Password</label>
+        <input type="password" class="form-control" formControlName="password">
+        <span class="text-danger"
+            *ngIf="(registerFormControl.password.touched || submitted) && registerFormControl.password.errors?.required">
+            Password is required
+        </span>
+        <span class="text-danger"
+            *ngIf="registerFormControl.password.touched && registerFormControl.password.errors?.invalidPassword">
+            Password should have minimum 8 characters, at least 1 uppercase letter, 1 lowercase
+            letter and 1 number
+        </span>
+    </div>
+    <br>
+    <div class="form-group form-way">
+        <label>Confirm Password</label>
+        <input type="password" class="form-control" formControlName="confirmPassword">
+        <span class="text-danger"
+            *ngIf="(registerFormControl.confirmPassword.touched || submitted)&& registerFormControl.confirmPassword.errors?.required">
+            Confirm Password is required
+        </span>
+        <span class="text-danger"
+            *ngIf="registerFormControl.confirmPassword.touched && registerFormControl.confirmPassword.errors?.passwordMismatch">
+            Passwords doesnot match
+        </span>
+    </div>
+    <br>
+    <div class="form-group">
+        <button type="submit" class="btn btn-block btn-shape">Sign Up</button>
+</div>
+ 

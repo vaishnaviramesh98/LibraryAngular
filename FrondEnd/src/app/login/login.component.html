@@ -1,0 +1,25 @@
+<div class="header">
+ <h3>Login</h3>
+</div>
+        <div class="container containtop" style="margin-left:5%;margin-right:5% ; max-width: 70%; margin-top:-24px">
+            <form  (ngSubmit)="loginUser()" #userlogin="ngForm">
+              <div class="form-way form-group">
+                <label for="uname1">Username</label>
+                <input type="text" class="form-control" name="uname" #uname="ngModel" [(ngModel)]="user.uname"  required/>
+                <small class="text-danger" [class.d-none]="uname.touched">This field is required</small>
+
+             
+                </div>
+                <br>
+              <div class="form-way form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" name="password" #password="ngModel" [(ngModel)]="user.password"  required/>
+                <small class="text-danger" [class.d-none]="password.touched">This field is required</small>
+                </div>
+               <br>
+              <button type="submit" class="btn btn-block btn-shape" [disabled]="userlogin.form.invalid" style="margin-bottom: 48px;">Login</button>
+            </form>  
+              <br>
+              <br>
+              <br>
+          </div>                           

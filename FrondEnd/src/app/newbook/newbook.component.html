@@ -1,0 +1,43 @@
+<div class="header">
+  <h3>Add Book</h3>
+ </div>
+<div class="container containtop" style="margin-left:5%;margin-right:5% ; max-width: 70%; margin-top:-24px">
+<form (ngSubmit)="AddBook()" #userlogin="ngForm">
+      <div class="form-way form-group">
+         <label>Book Name</label>   
+         <input type="text" name="b_id"  class="form-control" [(ngModel)]="bookItem.bookName" #b_id="ngModel" required/>      
+      </div>
+      <br>
+      <div class="form-way form-group">
+        <label>Author Name</label>   
+        <input type="text" name="b_name"  class="form-control" [(ngModel)]="bookItem.authorName" #b_name="ngModel" required/> 
+      </div>
+      <br>
+      <div class="form-way form-group">
+        <label>Book Genre</label>   
+        <input type="text" name="b_code"  class="form-control" [(ngModel)]="bookItem.bookGenre" #b_code="ngModel" required/>  
+      </div>
+      <br>
+      <div class="form-way form-group">
+        <label>Image Url</label>   
+        <input type="text" name="b_date"  class="form-control" [(ngModel)]="bookItem.imageUrl" #b_date="ngModel" required/>  
+      </div>
+      <br>
+      <input type="submit" value="Submit" [disabled]="userlogin.form.invalid" class="btn btn-block btn-shape"/>  
+    </form>
+                  
+     </div>          
+                              
+                   
+                 
+                                 
+                   
+                 
+                           
+                   
+      
+                 
+                      
+                                     
+                              
+
